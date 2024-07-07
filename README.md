@@ -45,7 +45,7 @@ createList();
 ## Running the application
 
 1. Once you open the project on your vs code you can go live.
-2. click the following link `https://blairpeters.github.io/code-challenge-2-javascript/`
+2. visit the following deployed link `https://blairpeters.github.io/code-challenge-2-javascript/`
 
 ## Author
 
