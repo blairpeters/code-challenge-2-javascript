@@ -47,3 +47,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   markPurchasedBtn.addEventListener("click", markAllPurchased);
 });
+// Optionally, load items from localStorage if available
+if (localStorage.getItem("items")) {
+  item = JSON.parse(localStorage.getItem("items"));
+  createList();
+}
+
+// Save items to localStorage whenever items array changes
+function saveToLocalStorage() {
+  localStorage.setItem("items", JSON.stringify(item));
+}
