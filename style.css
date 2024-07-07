@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: burlywood;
   margin: 20px;
 }
 
@@ -20,11 +20,6 @@ ul {
 
 li {
   margin-bottom: 8px;
-}
-
-li.completed {
-  text-decoration: line-through;
-  color: #888;
 }
 
 button {
