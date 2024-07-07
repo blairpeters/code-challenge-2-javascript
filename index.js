@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const itemInput = document.getElementById("itemInput");
   const addItemBtn = document.getElementById("addItemBtn");
   const clearListBtn = document.getElementById("clearListBtn");
+  const markPurchasedBtn = document.getElementById("markPurchasedBtn");
 
   // Array to store shopping list items
   let items = [];
@@ -31,6 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
       itemInput.value = "";
     }
   }
+  function markAllPurchased() {
+    items.forEach((item) => {
+      item.completed = true;
+    });
+    createList(); // Render the updated list
+  }
 
   // Event listeners
   addItemBtn.addEventListener("click", addItem);
@@ -38,4 +45,5 @@ document.addEventListener("DOMContentLoaded", function () {
     items = [];
     createList();
   });
+  markPurchasedBtn.addEventListener("click", markAllPurchased);
 });
