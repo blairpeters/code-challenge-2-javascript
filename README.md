@@ -16,15 +16,28 @@
    Attach event listeners to the list of items to allow users to mark them as purchased.
    Attach an event listener to the "Clear List" button to remove all items from the list.
 
-addItemBtn.addEventListener("click", addItem);
-clearListBtn.addEventListener("click", () => {
-items = [];
-createList();
-});
+   **example**
+
+   addItemBtn.addEventListener("click", addItem);
+   clearListBtn.addEventListener("click", () => {
+   items = [];
+   createList();
+   });
 
 4. **Bonus Features:**
    Allow users to edit existing list items.
    Implement persistence using local storage to save the list even after the page reloads.
+
+   **example**
+   if (localStorage.getItem("items")) {
+   item = JSON.parse(localStorage.getItem("items"));
+   createList();
+   }
+
+// Save items to localStorage whenever items array changes
+function saveToLocalStorage() {
+localStorage.setItem("items", JSON.stringify(item));
+}
 
 ## system requirements
 
